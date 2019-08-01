@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    // color: $primary-color;
+    box-sizing: border-box;
+    background: rgba(218, 208, 212, 0.219);
+}
+
+// li{
+//     list-style: none; 
+// }
+// a{
+//     text-decoration: none;
+//     color: $font-white;
+//     text-decoration: none;
+
+// }
+// p{
+//     color: $para-text;
+// }
+// h2{
+//     color:$head-two
+// }
