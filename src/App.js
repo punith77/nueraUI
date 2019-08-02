@@ -2,14 +2,19 @@ import React from 'react';
 
 import './scss/main.scss'
 
-// import AddItem from './containers/AddItem'
+import Header from './containers/Header'
 import MainPage from './containers/MainPage'
 
 function App() {
   return (
-    <div className="App">
+
+    <div className="app-wrapper">
+      <Header />
       <MainPage />
+
     </div>
+
+
   );
 }
 

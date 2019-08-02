@@ -1,17 +1,25 @@
 .main-container {
     width: 80%;
-    background-color: orangered;
     margin: 0 auto;
-    button {
-        // float: right;
+}
+.main-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-        margin: 10px;
-    }
+}
+.main-total{
+  background-color: #5bba46;
+  border: 1px solid #4D4D4F;
+  border-radius: 3px;
+  padding: 7px 2.4rem;
+  transition: all 1s ;
+  background-color: #5bba46;
+  margin-top: 2rem;
+
 }
 
-
 i {
-    color: black;
     font-size: 1.6rem;
     cursor: pointer;
 }
@@ -23,7 +31,7 @@ table {
  th{
     width: 33.333%;
     text-align: center;
-    font-size: 25px;
+    font-size: 2rem;
     padding-bottom: 20px;
 }
  tr {
@@ -31,10 +39,8 @@ table {
 }
 td {
     padding: 5px;
-    
+    font-size: 1.4rem;
   }
-
-
 
   .Modal {
     position: absolute;
@@ -42,7 +48,9 @@ td {
     left: 40px;
     right: 40px;
     bottom: 40px;
-    background-color: papayawhip;
+    background-color: #5bba46;
+    outline: none;
+  
   }
 
   .Overlay {
@@ -54,3 +62,72 @@ td {
     background-color: rgba(107, 104, 104, 0.664);
   }
 
+  .form-wrapper {
+      width: 80%;
+      height: 80%;
+      margin: 0 auto;
+      background-color: #5bba46;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        margin-top: 7rem;
+  }
+
+  form {
+      width: 60%;
+      font-size: 1.6rem;
+  }
+
+  .input-item{
+      width: 100%;
+      outline: none;
+      line-height: 2;
+      margin: 1rem 0;
+      font-size: 1.6rem;
+      border-radius: 5px;
+      border: 1px solid #4D4D4F;
+      padding: 3px 10px;
+  }
+  .select-item{
+    width: 100%;
+    font-size:1.6rem;
+    outline: none;
+    border: 1px solid #4D4D4F;
+    margin: 1rem 0;
+    height: 4.1rem;
+}
+
+ 
+  .add-btn{
+     color:#4D4D4F;
+     font-size: 1.6rem;
+     border: 1px solid #4D4D4F;
+     border-radius: 3px;
+     padding: 1.2rem 3rem;
+     transition: all 1s ;
+     background-color: #5bba46;
+     margin-top: 2rem;
+     position: relative;
+     outline: none;
+  }
+  .add-btn:before{
+        content: 'YEAH!';
+        color: white;
+        position: absolute;
+        left:0;
+        top:0;
+        height: 100%;
+        width: 100%;
+        background-color: #4D4D4F;
+        transform: translateY(-100%);
+        transition: all 1s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        outline: none
+  }
+  .add-btn:hover:before{
+    transform: translateY(0);
+    opacity: 1;
+}

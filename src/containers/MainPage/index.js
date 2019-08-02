@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import _ from 'lodash';
 import ReactModal from 'react-modal';
 import { getItems, deleteItem, addItem } from './action';
 import ItemDetail from './itemDetail';
@@ -65,10 +64,6 @@ class MainPage extends React.Component {
 
 
     }
-
-
-
-
 
     calculateTotalSum(data) {
         let totalSum = 0;
@@ -146,14 +141,18 @@ class MainPage extends React.Component {
 
     }
 
-
     render() {
-        console.log(this.state)
+
         return (
             <div className="main-container">
+                <div className="main-heading">
+                    <button onClick={this.handleOpenModal} className="add-btn">Add Item</button>
+                    <div className="main-total"><h1>Total: {this.calculateTotalSum(this.props.items)}</h1></div>
+
+                </div>
 
                 <div>
-                    <button onClick={this.handleOpenModal}>Trigger Modal</button>
+
                     <ReactModal
                         isOpen={this.state.showModal}
                         contentLabel="onRequestClose Example"
@@ -161,23 +160,39 @@ class MainPage extends React.Component {
                         className="Modal"
                         overlayClassName="Overlay"
                     >
-                        <div>
+                        <div className="form-wrapper">
                             <form onSubmit={this.handleSubmit}>
-                                <label>Item Name</label>
-                                <input name="inputItem" value={this.state.inputItem} onChange={this.handleChange} />
-                                <label>Item Cost</label>
-                                <input name="inputCost" value={this.state.inputCost} onChange={this.handleChange} />
-                                <label>Select Category</label>
-                                <select name="inputCategory" value={this.state.inputCategory} onChange={this.handleChange}>
-                                    <option>Select an category</option>
-                                    {this.getCategories(this.props.items).map(category => (
-                                        <option value={category} key={category}>
-                                            {category}
-                                        </option>
-                                    ))}
-                                </select>
 
-                                <button type="submit">Submit</button>
+                                <div className="form-item">
+                                    <label>Item Name</label>
+                                    <input name="inputItem" value={this.state.inputItem} onChange={this.handleChange} placeholder="Enter item name" className="input-item" />
+                                </div>
+                                <div>
+                                    <label>Item Cost</label>
+                                    <input name="inputCost" value={this.state.inputCost} onChange={this.handleChange} placeholder="Enter the cost" className="input-item" />
+
+                                </div>
+
+                                <div>
+                                    <label>Select Category</label>
+                                    <select name="inputCategory" value={this.state.inputCategory} onChange={this.handleChange} className="select-item">
+                                        <option>Select an category</option>
+                                        {['Electronics', 'Clothing', 'Kitchen'].map(category => (
+                                            <option value={category} key={category}>
+                                                {category}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <button type="submit" className="add-btn">Submit</button>
+                                </div>
+
+
+
+
+
+
                             </form>
 
                         </div>
@@ -185,7 +200,7 @@ class MainPage extends React.Component {
                     </ReactModal>
                 </div>
                 {this.renderTable()}
-                <h1>{this.calculateTotalSum(this.props.items)}</h1>
+
             </div>
         )
     }

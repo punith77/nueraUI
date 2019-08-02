@@ -4,19 +4,19 @@ export const appData =
             itemName: "Tv",
             itemCost: 2000,
             id: 1,
-            category: "electronics"
+            category: "Electronics"
         },
         {
             itemName: "playstation",
             itemCost: 400,
             id: 2,
-            category: "electronics"
+            category: "Electronics"
         },
         {
             itemName: "stereo",
             itemCost: 1600,
             id: 3,
-            category: "electronics"
+            category: "Electronics"
         },
 
 
@@ -24,13 +24,13 @@ export const appData =
             itemName: "Shirts",
             itemCost: 1100,
             id: 4,
-            category: "clothing"
+            category: "Clothing"
         },
         {
             itemName: "Jeans",
             itemCost: 1100,
             id: 5,
-            category: "clothing"
+            category: "Clothing"
         },
 
         {
