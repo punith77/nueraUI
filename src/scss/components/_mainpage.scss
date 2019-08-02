@@ -48,7 +48,7 @@ td {
     left: 40px;
     right: 40px;
     bottom: 40px;
-    background-color: #5bba46;
+    background-color: #fff;
     outline: none;
   
   }
@@ -66,7 +66,8 @@ td {
       width: 80%;
       height: 80%;
       margin: 0 auto;
-      background-color: #5bba46;
+  
+      border: 1px solid #5bba46;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -85,14 +86,14 @@ td {
       margin: 1rem 0;
       font-size: 1.6rem;
       border-radius: 5px;
-      border: 1px solid #4D4D4F;
+      border: 1px solid #5bba46;
       padding: 3px 10px;
   }
   .select-item{
     width: 100%;
     font-size:1.6rem;
     outline: none;
-    border: 1px solid #4D4D4F;
+    border: 1px solid #5bba46;
     margin: 1rem 0;
     height: 4.1rem;
 }
