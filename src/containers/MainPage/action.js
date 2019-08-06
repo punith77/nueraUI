@@ -1,33 +1,32 @@
-// if the request is async we make a async req up here
-// we dont need to use redux thunk middleware uphere - but using it to show case my skills with redux thunk
 
-import { appData } from '../../appData';
+import axios from 'axios'
+
 
 export const getItems = () => {
-    // async req
-    return function (dispatch) {
+    return async function (dispatch) {
+        const itemsList = await axios.get('https://nueraapi.herokuapp.com/api/contents/getItems');
         dispatch({
             type: 'GET_ITEMS',
-            payload: appData
+            payload: itemsList.data
         })
     }
 }
 
 export const deleteItem = (removeId) => {
-    // async req
-    return function (dispatch) {
+    return async function (dispatch) {
+        const itemDeleted = await axios.delete(`https://nueraapi.herokuapp.com/api/contents/${removeId}`);
         dispatch({
             type: 'DELETE_ITEM',
-            payload: removeId
+            payload: itemDeleted.data._id
         })
     }
 }
 export const addItem = (addData) => {
-    // async req
-    return function (dispatch) {
+    return async function (dispatch) {
+        const itemAdded = await axios.post('https://nueraapi.herokuapp.com/api/contents/addItem', addData);
         dispatch({
             type: 'ADD_ITEM',
-            payload: addData
+            payload: itemAdded.data
         })
     }
 }

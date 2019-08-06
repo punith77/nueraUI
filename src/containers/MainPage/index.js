@@ -142,7 +142,7 @@ class MainPage extends React.Component {
     }
 
     render() {
-
+        // console.log(this.props.items)
         return (
             <div className="main-container">
                 <div className="main-heading">

@@ -5,7 +5,7 @@ export default (state = [], action) => {
             return action.payload;
         case 'DELETE_ITEM':
             return state.filter(function (item) {
-                return item.id !== action.payload
+                return item._id !== action.payload
             });
         case 'ADD_ITEM':
             return [...state, action.payload]

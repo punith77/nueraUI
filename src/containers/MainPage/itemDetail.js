@@ -6,7 +6,7 @@ const ItemDetails = props => {
 
     const something = props.itemsData.map((item, index) => {
         return (
-            <ItemField data={item} key={index} handleDelete={() => props.handleDelete(item.id)} />
+            <ItemField data={item} key={index} handleDelete={() => props.handleDelete(item._id)} />
 
         )
     });
