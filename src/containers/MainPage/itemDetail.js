@@ -1,17 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import ItemField from './itemField';
+import ItemField from "./itemField";
 
-const ItemDetails = props => {
-
-    const something = props.itemsData.map((item, index) => {
-        return (
-            <ItemField data={item} key={index} handleDelete={() => props.handleDelete(item._id)} />
-
-        )
-    });
-    return something;
+const ItemDetails = (props) => {
+  const something = props.itemsData.map((item, index) => {
+    return (
+      <ItemField
+        data={item}
+        key={index}
+        handleDelete={() => props.handleDelete(item._id)}
+      />
+    );
+  });
+  return something;
 };
 
-
-export default ItemDetails
+export default ItemDetails;

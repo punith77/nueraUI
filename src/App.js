@@ -1,20 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import './scss/main.scss'
+import "./scss/main.scss";
 
-import Header from './containers/Header'
-import MainPage from './containers/MainPage'
+import Header from "./containers/Header";
+import MainPage from "./containers/MainPage";
 
 function App() {
   return (
-
-    <div className="app-wrapper">
+    <div className='app-wrapper'>
       <Header />
       <MainPage />
-
     </div>
-
-
   );
 }
 
